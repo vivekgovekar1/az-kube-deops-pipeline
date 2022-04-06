@@ -11,6 +11,7 @@ pool:
 
 steps:
 - script: echo Hello, world!
+- bash: echo $(myTestVar) 
   displayName: 'Run a one-line script'
 
 - script: |
