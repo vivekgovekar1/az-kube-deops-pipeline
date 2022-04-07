@@ -10,6 +10,8 @@ pool:
   vmImage: ubuntu-latest
 stages: 
 - stage: Build
+  variables: 
+  myEnvironment: Dev  
   jobs: 
       - job: firstjob   
         steps:
@@ -18,8 +20,7 @@ stages:
         
       - job: SecondJob
         steps:
-        variables: 
-          - myEnvironment: Dev  
+
           - script: echo Hello, world! Job 2
             displayName: 'Run a one-line script'
 
