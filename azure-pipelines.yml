@@ -18,10 +18,11 @@ stages:
         
       - job: SecondJob
         steps:
+        variables: 
+          - myEnvironment: Dev  
           - script: echo Hello, world! Job 2
             displayName: 'Run a one-line script'
-          - variables: 
-            - myEnvironment: Dev  
+
           - bash: ls -l
           - bash: echo ${myEnvironment} 
 - stage: Testing
