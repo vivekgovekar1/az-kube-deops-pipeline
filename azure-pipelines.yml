@@ -25,8 +25,8 @@ stages:
             displayName: 'Run a one-line script'
 
           - bash: ls -l
-          - bash: echo ${myEnvironment}
-          - bash: echo ${myNewEnv} 
+          - bash: echo $(myEnvironment)
+          - bash: echo $(myNewEnv) 
 - stage: Testing
   jobs: 
       - job: ThirdJob
