@@ -11,7 +11,9 @@ pool:
 
 jobs: 
 - job: firstjob   
-  dependsOn: SecondJob,ThirdJob 
+  dependsOn: 
+  - SecondJob
+  - ThirdJob 
    
   steps:
   - script: echo Hello, world!
