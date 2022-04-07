@@ -15,11 +15,15 @@ stages:
         steps:
         - script: echo Hello, world!
           displayName: 'Run a one-line script'
+        
       - job: SecondJob
         steps:
           - script: echo Hello, world! Job 2
             displayName: 'Run a one-line script'
-          - bash: ls -l 
+          - variables: 
+            - myEnvironment: Dev  
+          - bash: ls -l
+          - bash: echo ${myEnvironment} 
 - stage: Testing
   jobs: 
       - job: ThirdJob
