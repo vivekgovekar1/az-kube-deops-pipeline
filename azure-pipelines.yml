@@ -18,7 +18,8 @@ stages:
       - job: SecondJob
         steps:
           - script: echo Hello, world! Job 2
-            displayName: 'Run a one-line script' 
+            displayName: 'Run a one-line script'
+          - bash: ls -l 
 - stage: Testing
   jobs: 
       - job: ThirdJob
