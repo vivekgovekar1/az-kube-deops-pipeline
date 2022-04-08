@@ -20,7 +20,6 @@ stages:
         - script: echo Hello, world!
         -  bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
         -  bash: This $(System.AccessToken) 
-        -  displayName: 'Run a one-line script'
         
       - job: SecondJob
         steps:
