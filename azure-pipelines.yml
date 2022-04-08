@@ -11,12 +11,16 @@ pool:
 stages: 
 - stage: Build
   variables: 
-    myEnvironment: Dev  
+  #  myEnvironment: Dev 
+      env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
   jobs: 
       - job: firstjob   
         steps:
         - script: echo Hello, world!
-          displayName: 'Run a one-line script'
+        -  bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
+        -  bash: This $(System.AccessToken) 
+        -  displayName: 'Run a one-line script'
         
       - job: SecondJob
         steps:
