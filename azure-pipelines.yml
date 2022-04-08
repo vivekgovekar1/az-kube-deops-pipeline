@@ -17,8 +17,8 @@ stages:
   jobs: 
       - job: firstjob   
         steps:
-         script: echo Hello, world!
-         bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
+         - script: echo Hello, world!
+         - bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
 
         
       - job: SecondJob
