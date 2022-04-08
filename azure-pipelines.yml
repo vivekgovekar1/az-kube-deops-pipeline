@@ -19,7 +19,7 @@ stages:
       - job: firstjob   
         steps:
          - script: echo Hello, world!
-         - bash: echo "This is a script that uses $(System.AccessToken)" 
+         - bash: echo "This is a script that uses a $(System.AccessToken)" 
          - bash: echo "My Name $(myNameIs)"
         
       - job: SecondJob
