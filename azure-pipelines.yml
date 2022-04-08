@@ -17,9 +17,9 @@ stages:
   jobs: 
       - job: firstjob   
         steps:
-        - script: echo Hello, world!
-        -  bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
-        -  bash: This $(System.AccessToken) 
+         script: echo Hello, world!
+         bash: This is a script that could use $env:SYSTEM_ACCESSTOKEN 
+         #bash: echo 'This $(System.AccessToken) 
         
       - job: SecondJob
         steps:
