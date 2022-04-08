@@ -14,12 +14,13 @@ stages:
   #  myEnvironment: Dev 
       env:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+      myNameIs: Vivek 
   jobs: 
       - job: firstjob   
         steps:
          - script: echo Hello, world!
          - bash: echo "This is a script that uses $(System.AccessToken)" 
-
+         - bash: echo "My Name $(myNameIs)"
         
       - job: SecondJob
         steps:
