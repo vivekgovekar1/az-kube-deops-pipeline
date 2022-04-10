@@ -8,32 +8,12 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-stages: 
-- stage: Build
-  variables: 
-  #  myEnvironment: Dev 
-      env:
-      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
-      myNameIs: Vivek 
-  jobs: 
-      - job: firstjob   
-        steps:
-         - script: echo Hello, world!
-         - bash: echo "This is a script that uses a $(System.AccessToken)" 
-         - bash: echo "My Name $(myNameIs)"
-        
-      - job: SecondJob
-        steps:
 
-          - script: echo Hello, world! Job 2
-            displayName: 'Run a one-line script'
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 
-          - bash: ls -l
-          - bash: echo $(myEnvironment)
-          - bash: echo $(myNewEnv) 
-- stage: Testing
-  jobs: 
-      - job: ThirdJob
-        steps:
-          - script: echo Hello, world! Job 2
-            displayName: 'Run a one-line script' 
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
