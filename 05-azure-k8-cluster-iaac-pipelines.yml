@@ -28,8 +28,8 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'kubernetes'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'vg-storagerac-name'
-    backendAzureRmContainerName: 'vg-container-name'
+    backendAzureRmStorageAccountName: 'vgstoragerac'
+    backendAzureRmContainerName: 'vgcontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
     allowTelemetryCollection: true
 
