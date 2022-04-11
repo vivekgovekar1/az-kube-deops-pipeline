@@ -12,8 +12,6 @@ pool:
 
 
 steps:
-- script: Azure K8 Cluster using Terraform!
-  displayName: 'Run a one-line script'
 
 - task: DownloadSecureFile@1
   name: publickey
