@@ -26,7 +26,7 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'VG-azure-RM-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'vg-terraform-backend-rg'
+    backendAzureRmResourceGroupName: 'kubernetes'
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'vg-storagerac-name'
     backendAzureRmContainerName: 'vg-container-name'
