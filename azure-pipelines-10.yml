@@ -24,7 +24,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'vivekgovekar1'
+        containerRegistry: 'vivekgovekar1-docker-hub-conn'
         repository: 'vivekgovekar1/docker-hub-repo'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
