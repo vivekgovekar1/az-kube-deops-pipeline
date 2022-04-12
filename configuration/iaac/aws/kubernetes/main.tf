@@ -16,7 +16,7 @@ terraform {
 }
 
 resource "aws_default_vpc" "default" {
-
+    id = "vpc-0bcda71ada557a8df"
 }
 
 data "aws_subnet_ids" "subnets" {
@@ -36,7 +36,7 @@ module "in28minutes-cluster" {
   cluster_name    = "in28minutes-cluster"
   cluster_version = "1.14"
   subnets         = ["subnet-08d02134aac1e987a", "subnet-058933e5b8b371a80"]
-  vpc_id          = aws_default_vpc.default.id
+  vpc_id          = "vpc-0bcda71ada557a8df"
 
   #vpc_id         = "vpc-1234556abcdef"
 
